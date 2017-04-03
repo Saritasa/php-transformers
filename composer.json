@@ -2,7 +2,7 @@
     "name": "saritasa/php-transformers",
     "type": "library",
     "description": "Saritasa custom transformers on top of League/Fractal Library",
-    "keywords": ["laravel", "blade"],
+    "keywords": ["api", "fractal", "transformers"],
     "license": "MIT",
     "authors": [
         {
@@ -13,8 +13,8 @@
     "require": {
         "php": ">=7.0",
         "illuminate/support": "5.*",
-        "league/fractal": "^0.15.0",
-        "illuminate/database": "5.*"
+        "illuminate/database": "5.*",
+        "league/fractal": "^0.15.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.7"
@@ -24,6 +24,10 @@
         "psr-4" : {
             "Saritasa\\Transformers\\": "src/"
         }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
