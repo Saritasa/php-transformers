@@ -1,5 +1,6 @@
 <?php
-namespace Saritasa\DingoApi\Transformers;
+
+namespace Saritasa\Transformers;
 
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Arrayable;
