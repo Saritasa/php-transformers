@@ -2,7 +2,8 @@
 
 Custom Data transformers on top of League/Fractal library.
 
-See https://laravel.com/docs/5.4/blade
+See http://fractal.thephpleague.com/
+https://github.com/thephpleague/fractal
 
 
 ## Laravel 5.x
