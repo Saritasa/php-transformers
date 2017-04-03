@@ -47,7 +47,28 @@ class UserProfileTransformer extends CombineTransformer
 ```
 
 ### LimitFieldsTransformer
+Result will contain only selected fields from source object.
 
+**Example**:
+```php
+$publicUserProfileTransformer = new LimitFieldsTransformer('id', 'name', 'created_at');
+
+```
+
+## Exceptions
+### TransformException
+Should be thrown by class, implementing IDataTransformer, if it encounters data,
+that cannot be transformed.
+
+**Example**:
+```php
+function transform(Arrayable $data) {
+    if (!$data->author) {
+        new TransformException($this, "Author may not be empty");
+    }
+    // ...
+}
+```
 
 ## Contributing
 
