@@ -14,15 +14,6 @@ Install the ``saritasa/php-transformers`` package:
 $ composer require saritasa/php-transformers
 ```
 
-Add the BladeDirectivesServiceProvider service provider ``config/app.php``:
-
-```php
-'providers' => array(
-    // ...
-    Saritasa\Laravel\BladeDirectivesServiceProvider::class,
-)
-```
-
 ## Available transformers
 
 ### IDataTransformer
