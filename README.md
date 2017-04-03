@@ -75,7 +75,8 @@ function transform(Arrayable $data) {
 1. Create fork
 2. Checkout fork
 3. Develop locally as usual. **Code must follow [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-fig.org/psr/psr-2/)**
-4. When ready, create pull request
+4. Update README.md to describe new or changed functionality. Add changes description to CHANGE file.
+5. When ready, create pull request
 
 ## Resources
 
