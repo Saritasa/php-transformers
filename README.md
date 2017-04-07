@@ -14,6 +14,14 @@ Install the ```saritasa/transformers``` package:
 $ composer require saritasa/transformers
 ```
 
+Add the TransformersServiceProvider service provider in ``config/app.php``:
+
+```php
+'providers' => array(
+    // ...
+    Saritasa\Transformers\TransformersServiceProvider::class,
+)
+```
 ## Available transformers
 
 ### IDataTransformer
@@ -69,6 +77,12 @@ function transform(Arrayable $data) {
     // ...
 }
 ```
+
+## Utility Classes
+
+### DtoModel
+Allows you to use pure DTO models instead of Eloquent, while using Fractal for
+collection transformation.
 
 ## Contributing
 
