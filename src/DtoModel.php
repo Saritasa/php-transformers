@@ -8,11 +8,20 @@ use Illuminate\Contracts\Support\Jsonable;
 
 class DtoModel implements Arrayable, Jsonable, \JsonSerializable
 {
+    use SimpleJsonSerialize;
+
     public static $snakeAttributes = true;
     protected static $collectionKey = 'results';
     protected static $propertiesCache;
 
-    use SimpleJsonSerialize;
+    function __construct(array $data)
+    {
+        foreach (static::getInstanceProperties() as $key) {
+            if (isset($data[$key])) {
+                $this->$key = $data[$key];
+            }
+        }
+    }
 
     public function getTable()
     {
