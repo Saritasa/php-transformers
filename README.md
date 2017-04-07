@@ -8,10 +8,10 @@ https://github.com/thephpleague/fractal
 
 ## Laravel 5.x
 
-Install the ``saritasa/php-transformers`` package:
+Install the ```saritasa/transformers``` package:
 
 ```bash
-$ composer require saritasa/php-transformers
+$ composer require saritasa/transformers
 ```
 
 ## Available transformers

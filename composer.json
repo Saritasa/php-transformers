@@ -1,5 +1,5 @@
 {
-    "name": "saritasa/php-transformers",
+    "name": "saritasa/transformers",
     "type": "library",
     "description": "Saritasa custom transformers on top of League/Fractal Library",
     "keywords": ["api", "fractal", "transformers"],
