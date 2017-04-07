@@ -1,5 +1,6 @@
 {
   "providers": [
+    "Saritasa\\Transformers\\TransformersServiceProvider"
   ],
   "aliases": [
     {

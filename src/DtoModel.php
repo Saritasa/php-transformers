@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Api\V1\Responses;
+namespace Saritasa\Transformers;
 
-use App\Http\Traits\SimpleJsonSerialize;
+use Saritasa\Transformers\Traits\SimpleJsonSerialize;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 
