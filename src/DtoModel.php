@@ -2,6 +2,7 @@
 
 namespace Saritasa\Transformers;
 
+use League\Flysystem\NotSupportedException;
 use Saritasa\Transformers\Traits\SimpleJsonSerialize;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
@@ -34,6 +35,15 @@ class DtoModel implements Arrayable, Jsonable, \JsonSerializable
             $result[$key] = $this->$key;
         }
         return $result;
+    }
+
+    public function __get($name)
+    {
+        if (in_array($name, static::getInstanceProperties())) {
+            return $this->$name;
+        } else {
+            throw new NotSupportedException("Requesting unavailable field: $name");
+        }
     }
 
     private static function getInstanceProperties()
