@@ -3,18 +3,27 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Max limit of list results
+    | Max page size for paginated list results
     |--------------------------------------------------------------------------
     |
-    | If any user will to try get list more then maxLimit results, limit will
-    | set to maxLimit value
+    | If any user will to try request list more then maxPageSize results,
+    | pageSize will set to maxPageSize value
     |
     */
 
-    'maxLimit' => 500,
+    'maxPageSize' => env('API_PAGE_SIZE_MAX', 500),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default page size for paginated list results
+    |--------------------------------------------------------------------------
+    |
+    | If any user does not specify page size for paginated list, he will get
+    | defaultPageSize number of records.
+    */
 
     /**
      * If limit not specified, any list will by limited by this value
      */
-    'defaultLimit' => 30,
+    'defaultPageSize' => env('API_PAGE_SIZE_DEFAULT', 30),
 ];

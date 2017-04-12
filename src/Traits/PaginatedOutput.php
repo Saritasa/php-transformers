@@ -7,8 +7,8 @@ use App\Models\Support\PagingInfo;
 use Illuminate\Http\Request;
 
 const PAGE_SIZE = 'per_page';
-const API_MAX_LIMIT = 'api.maxLimit';
-const API_DEFAULT_LIMIT = 'api.defaultLimit';
+const API_PAGE_SIZE_MAX = 'api.maxPageSize';
+const API_PAGE_SIZE_DEFAULT = 'api.defaultPageSize';
 
 trait PaginatedOutput
 {
@@ -27,10 +27,10 @@ trait PaginatedOutput
         if (isset($input[PAGE_SIZE])) {
             $pageSize = (int)$input[PAGE_SIZE];
             if ($pageSize <= 0) {
-                $input[PAGE_SIZE] = config(API_MAX_LIMIT);
+                $input[PAGE_SIZE] = config(API_PAGE_SIZE_MAX);
             }
-            if ($pageSize > config(API_MAX_LIMIT)) {
-                $input[PAGE_SIZE] = config(API_MAX_LIMIT);
+            if ($pageSize > config(API_PAGE_SIZE_MAX)) {
+                $input[PAGE_SIZE] = config(API_PAGE_SIZE_MAX);
             }
         }
         return new PagingInfo($input);
@@ -42,10 +42,10 @@ trait PaginatedOutput
         if (isset($input[PAGE_SIZE])) {
             $pageSize = (int)$input[PAGE_SIZE];
             if ($pageSize <= 0) {
-                $input[PAGE_SIZE] = config(API_DEFAULT_LIMIT);
+                $input[PAGE_SIZE] = config(API_PAGE_SIZE_DEFAULT);
             }
-            if ($pageSize > config(API_MAX_LIMIT)) {
-                $input[PAGE_SIZE] = config(API_MAX_LIMIT);
+            if ($pageSize > config(API_PAGE_SIZE_MAX)) {
+                $input[PAGE_SIZE] = config(API_PAGE_SIZE_MAX);
             }
         }
         return new CursorRequest($input);
