@@ -2,8 +2,8 @@
 
 namespace Saritasa\Transformers\Traits;
 
-use App\Models\Support\CursorRequest;
-use App\Models\Support\PagingInfo;
+use Saritasa\DingoApi\CursorRequest;
+use Saritasa\DingoApi\PagingInfo;
 use Illuminate\Http\Request;
 
 const PAGE_SIZE = 'per_page';
