@@ -1,16 +1,18 @@
 1.0.3
+-----
 - Move default pagination limits to saritasa/dingo-api-custom
 - Remove TransformersProvider
 
 1.0.2
+-----
 - Add TransformException
 
 1.0.1
+-----
 - Fix namespace
 
 1.0.0
 -----
-
 - Initial version:
 
 IDataTransformer
