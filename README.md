@@ -14,14 +14,6 @@ Install the ```saritasa/transformers``` package:
 $ composer require saritasa/transformers
 ```
 
-Add the TransformersServiceProvider service provider in ``config/app.php``:
-
-```php
-'providers' => array(
-    // ...
-    Saritasa\Transformers\TransformersServiceProvider::class,
-)
-```
 ## Available transformers
 
 ### IDataTransformer
