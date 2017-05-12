@@ -1,3 +1,7 @@
+1.0.3
+- Move default pagination limits to saritasa/dingo-api-custom
+- Remove TransformersProvider
+
 1.0.2
 - Add TransformException
 
