@@ -1,8 +1,12 @@
-1.0.7
+1.0.8
 -----
 Add:
 - TransformTypeMismatchException
 - TransformersServiceProvider
+
+1.0.7
+-----
+Update dependencies versions
 
 1.0.6
 -----
