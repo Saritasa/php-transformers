@@ -15,6 +15,6 @@ class TransformersServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', '');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'transformers');
     }
 }

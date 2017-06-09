@@ -17,7 +17,8 @@ class TransformTypeMismatchException extends TransformException
      */
     public function __construct(IDataTransformer $transformer, string $expected_class, string $actual_class)
     {
-        $message = trans('transform.model_type_mismatch', compact($expected_class, $actual_class));
+        $message = trans('transformers::transform.model_type_mismatch',
+            compact('expected_class', 'actual_class'));
         parent::__construct($transformer, $message);
     }
 }
