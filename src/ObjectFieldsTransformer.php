@@ -22,7 +22,22 @@ class ObjectFieldsTransformer extends BaseTransformer
     {
         $result = [];
         foreach ($this->onlyFields as $field) {
+            if (str_contains($field, '.')) {
+                $result[$field] = $this->getFieldRecursive($object, $field);
+            }
             $result[$field] = $object->$field;
+        }
+        return $result;
+    }
+
+    public function getFieldRecursive($object, $field) {
+        $fields = explode('.', $field);
+        $result = $object;
+        foreach ($fields as $field) {
+            if ($result == null){
+                break;
+            }
+            $result = $object->$field;
         }
         return $result;
     }

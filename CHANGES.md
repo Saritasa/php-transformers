@@ -1,3 +1,5 @@
+# Changes History
+
 1.0.10
 ------
 Add ObjectFieldsTransformer
@@ -28,17 +30,16 @@ Fixes
 
 1.0.2
 -----
-- Add TransformException
+Add TransformException
 
 1.0.1
 -----
-- Fix namespace
+Fix namespace
 
 1.0.0
 -----
-- Initial version:
-
-IDataTransformer
-BaseTransformer
-LimitFieldsTransformer
-CombineTransformer
+Initial version:
+- IDataTransformer
+- BaseTransformer
+- LimitFieldsTransformer
+- CombineTransformer
