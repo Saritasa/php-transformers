@@ -24,8 +24,9 @@ class ObjectFieldsTransformer extends BaseTransformer
         foreach ($this->onlyFields as $field) {
             if (str_contains($field, '.')) {
                 $result[$field] = $this->getFieldRecursive($object, $field);
+            } else {
+                $result[$field] = $object->$field;
             }
-            $result[$field] = $object->$field;
         }
         return $result;
     }
@@ -37,7 +38,7 @@ class ObjectFieldsTransformer extends BaseTransformer
             if ($result == null){
                 break;
             }
-            $result = $object->$field;
+            $result = $result->$field;
         }
         return $result;
     }
