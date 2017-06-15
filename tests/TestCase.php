@@ -10,8 +10,10 @@ class TestCase extends \PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass()
     {
-        $resolver = new ConnectionResolver();
-        $resolver->addConnection(null, new MySqlConnection(null));
-        Model::setConnectionResolver($resolver);
+        // Set fake DB connection resolver
+        $dbConnectionResolver = new ConnectionResolver();
+        $dbConnectionResolver->addConnection(null, new MySqlConnection(null));
+
+        Model::setConnectionResolver($dbConnectionResolver);
     }
 }

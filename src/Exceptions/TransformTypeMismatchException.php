@@ -11,6 +11,7 @@ class TransformTypeMismatchException extends TransformException
 {
     /**
      * Should be thrown, when transformer expects one type of model, but gets another, incompatible model
+     *
      * @param IDataTransformer $transformer Originator of message
      * @param string $expected_class Class or model, that was expected by transform() method
      * @param string $actual_class Class or model, that was actually given to transform() method

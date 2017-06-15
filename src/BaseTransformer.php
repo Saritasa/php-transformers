@@ -13,6 +13,7 @@ use League\Fractal\TransformerAbstract;
  */
 class BaseTransformer extends TransformerAbstract implements IDataTransformer
 {
+    /** @inheritdoc */
     public function transform(Arrayable $model)
     {
         $result = $model->toArray();

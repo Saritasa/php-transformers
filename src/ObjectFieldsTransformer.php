@@ -4,6 +4,9 @@ namespace Saritasa\Transformers;
 
 use Illuminate\Contracts\Support\Arrayable;
 
+/**
+ * Will output requested fields to result, regardless they described as $hidden or $visible in Eloquent model
+ */
 class ObjectFieldsTransformer extends BaseTransformer
 {
     /**
@@ -11,17 +14,22 @@ class ObjectFieldsTransformer extends BaseTransformer
      *
      * @var string[] array
      */
-    private $onlyFields;
+    private $fields;
 
-    function __construct(string ...$onlyFields)
+    /**
+     * Will output requested fields to result, regardless they described as $hidden or $visible in Eloquent model
+     * @param string[] $fields Fields to include in result
+     */
+    function __construct(string ...$fields)
     {
-        $this->onlyFields = $onlyFields;
+        $this->fields = $fields;
     }
 
+    /** @inheritdoc */
     public function transform(Arrayable $object)
     {
         $result = [];
-        foreach ($this->onlyFields as $field) {
+        foreach ($this->fields as $field) {
             if (str_contains($field, '.')) {
                 $result[$field] = $this->getFieldRecursive($object, $field);
             } else {

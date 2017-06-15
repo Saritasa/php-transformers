@@ -4,6 +4,11 @@ namespace Saritasa\Transformers;
 
 use Illuminate\Contracts\Support\Arrayable;
 
+/**
+ *  Result will first apply ->toArray() method (which acts, respecting Eloquent's
+ *  *$visible* and *$hidden* fields), then limits output to selected fields.
+ *  This, hidden fields will not get in output, even if listed.
+ */
 class LimitFieldsTransformer extends BaseTransformer
 {
     /**
@@ -13,11 +18,19 @@ class LimitFieldsTransformer extends BaseTransformer
      */
     private $onlyFields;
 
+    /**
+     *  Result will first apply ->toArray() method (which acts, respecting Eloquent's
+     *  *$visible* and *$hidden* fields), then limits output to selected fields.
+     *  This, hidden fields will not get in output, even if listed.
+     *
+     * @param string[] $onlyFields list of fields, to which result must be limited
+     */
     function __construct(string ...$onlyFields)
     {
         $this->onlyFields = $onlyFields;
     }
 
+    /** @inheritdoc */
     public function transform(Arrayable $model)
     {
         $data = parent::transform($model);
