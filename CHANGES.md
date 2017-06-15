@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.11
+------
+Fix DtoModel different classes fields overlap + DtoModel unit test
+
 1.0.10
 ------
 Add ObjectFieldsTransformer

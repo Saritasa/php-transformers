@@ -48,15 +48,17 @@ class DtoModel implements Arrayable, Jsonable, \JsonSerializable
 
     private static function getInstanceProperties()
     {
-        if (!static::$propertiesCache) {
-            static::$propertiesCache = [];
-            $reflect = new \ReflectionClass(static::class);
+        $class = static::class;
+        if (!isset(static::$propertiesCache[$class])) {
+            $cache = [];
+            $reflect = new \ReflectionClass($class);
             foreach ($reflect->getProperties() as $property) {
                 if (!$property->isStatic()){
-                    static::$propertiesCache[] = $property->getName();
+                    $cache[] = $property->getName();
                 }
             }
+            static::$propertiesCache[$class] = $cache;
         }
-        return static::$propertiesCache;
+        return static::$propertiesCache[$class];
     }
 }
