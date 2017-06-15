@@ -31,20 +31,20 @@ Interface to unlink dependency from League/Fractal library.
 Ensure, that every transformer implementation in this library has this interface.
 
 **Example**:
-```
+```php
 class AnotherTransformerWrapper implements IDataTransformer
 {
-    public function __construct(IDataTransformer $nestedTransformer) {}
+    public function __construct(IDataTransformer $nestedTransformer) { ... }
 }
 ```
 
 ### BaseTransformer
-When you just need to convert model to array via Dingo/Api methods,
+When you just need to convert model to JSON response via Dingo/Api methods,
 and have no specific formatting requirements, you can just use
-BaseTransformer. It calls Arrayable->toArray() method.
+**BaseTransformer**. It calls **Arrayable->toArray()** method.
 Thus, for Eloquent model result will consist of fields,
-described as $visible and not $hidden.
-Additionally converts fields, enumerated in $dates to ISO8061 format.
+described as *$visible** and not *$hidden.*
+Additionally converts fields, enumerated in *$dates* to ISO8061 format.
 
 **Example**:
 ```php
@@ -70,7 +70,7 @@ $user = User::find($userId);
 
 ### ObjectFieldsTransformer
 Will output requested fields to result, regardless they described as
-$hidden or $visible in Eloquent model
+*$hidden* or *$visible* in Eloquent model
 
 **Example**:
 ```php
@@ -118,7 +118,7 @@ class UserProfileTransformer extends CombineTransformer
 
 ### LimitFieldsTransformer
 Result will first apply ->toArray() method (which acts, respecting Eloquent's
-$visible and $hidden fields), then limits output to selected fields.
+*$visible* and *$hidden* fields), then limits output to selected fields.
 This, hidden fields will not get in output, even if listed.
 
 **Example**:
@@ -146,7 +146,7 @@ $user = User::find($userId);
 
 ## Exceptions
 ### TransformException
-Should be thrown by class, implementing IDataTransformer, if it encounters data,
+Should be thrown by class, implementing **IDataTransformer**, if it encounters data,
 that cannot be transformed.
 
 **Example**:
