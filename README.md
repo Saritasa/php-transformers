@@ -49,11 +49,11 @@ Additionally converts fields, enumerated in *$dates* to ISO8061 format.
 **Example**:
 ```php
 
-class User extends Model {
+class User extends \Illuminate\Database\Eloquent\Model {
     // "full_name" is a property calculated from first_name and last_name
-    $visible = ['full_name', 'created_at'];
-    $hidden = ['email', 'password'];
-    $dates = ['created_at', 'updated_at', 'birthday'];
+    protected $visible = ['full_name', 'created_at'];
+    protected $hidden = ['email', 'password'];
+    protected $dates = ['created_at', 'updated_at', 'birthday'];
 }
 
 class UserController extends BaseApiController {
@@ -76,11 +76,11 @@ Will output requested fields to result, regardless they described as
 **Example**:
 ```php
 
-class User extends Model {
+class User extends \Illuminate\Database\Eloquent\Model {
     // "full_name" is a property calculated from first_name and last_name
-    $visible = ['full_name', 'created_at'];
-    $hidden = ['email', 'password'];
-    $dates = ['created_at', 'updated_at', 'birthday'];
+    protected $visible = ['full_name', 'created_at'];
+    protected $hidden = ['email', 'password'];
+    protected $dates = ['created_at', 'updated_at', 'birthday'];
 }
 
 class UserController extends BaseApiController {
@@ -125,10 +125,10 @@ This, hidden fields will not get in output, even if listed.
 **Example**:
 ```php
 
-class User extends Model {
-    $visible = ['full_name', 'created_at'];
-    $hidden = ['email', 'password'];
-    $dates = ['created_at', 'updated_at', 'birthday'];
+class User extends \Illuminate\Database\Eloquent\Model {
+    protected $visible = ['full_name', 'created_at'];
+    protected $hidden = ['email', 'password'];
+    protected $dates = ['created_at', 'updated_at', 'birthday'];
 }
 
 class UserController extends BaseApiController {
