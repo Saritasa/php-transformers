@@ -2,26 +2,16 @@
 
 namespace Tests;
 
-class TestCase extends \Illuminate\Foundation\Testing\TestCase
+use Illuminate\Database\ConnectionResolver;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\MySqlConnection;
+
+class TestCase extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * The base URL to use while testing the application.
-     *
-     * @var string
-     */
-    protected $baseUrl = 'http://localhost';
-
-    /**
-     * Creates the application.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
-    public function createApplication()
+    public static function setUpBeforeClass()
     {
-        $app = require __DIR__.'/../bootstrap/app.php';
-
-        $app->make(\Illuminate\Contracts\Console\Kernel::class)->bootstrap();
-
-        return $app;
+        $resolver = new ConnectionResolver();
+        $resolver->addConnection(null, new MySqlConnection(null));
+        Model::setConnectionResolver($resolver);
     }
 }

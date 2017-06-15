@@ -2,8 +2,6 @@
 
 namespace Tests;
 
-use Saritasa\Database\Eloquent\Models\User;
-use Saritasa\PushNotifications\Models\UserDevice;
 use Saritasa\Transformers\ObjectFieldsTransformer;
 
 class ObjectFieldsTransformerTest extends TestCase
@@ -22,5 +20,8 @@ class ObjectFieldsTransformerTest extends TestCase
 
         $transformer = new ObjectFieldsTransformer('first_name', 'device.device_type');
         $result = $transformer->transform($user);
+        static::assertEquals(2, count(array_keys($result)));
+        static::assertEquals('Ivan', $result['first_name']);
+        static::assertEquals('android', $result['device.device_type']);
     }
 }
