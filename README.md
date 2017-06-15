@@ -43,13 +43,14 @@ When you just need to convert model to JSON response via Dingo/Api methods,
 and have no specific formatting requirements, you can just use
 **BaseTransformer**. It calls **Arrayable->toArray()** method.
 Thus, for Eloquent model result will consist of fields,
-described as *$visible** and not *$hidden.*
+described as *$visible* and not *$hidden.*
 Additionally converts fields, enumerated in *$dates* to ISO8061 format.
 
 **Example**:
 ```php
 
 class User extends Model {
+    // "full_name" is a property calculated from first_name and last_name
     $visible = ['full_name', 'created_at'];
     $hidden = ['email', 'password'];
     $dates = ['created_at', 'updated_at', 'birthday'];
@@ -76,7 +77,7 @@ Will output requested fields to result, regardless they described as
 ```php
 
 class User extends Model {
-    // let's say "full_name" is a property calculated from first_name and last_name
+    // "full_name" is a property calculated from first_name and last_name
     $visible = ['full_name', 'created_at'];
     $hidden = ['email', 'password'];
     $dates = ['created_at', 'updated_at', 'birthday'];
