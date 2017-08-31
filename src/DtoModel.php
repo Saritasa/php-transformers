@@ -15,7 +15,7 @@ class DtoModel implements Arrayable, Jsonable, \JsonSerializable
     protected static $collectionKey = 'results';
     protected static $propertiesCache;
 
-    function __construct(array $data)
+    public function __construct(array $data)
     {
         foreach (static::getInstanceProperties() as $key) {
             if (isset($data[$key])) {
@@ -29,7 +29,8 @@ class DtoModel implements Arrayable, Jsonable, \JsonSerializable
         return static::$collectionKey;
     }
 
-    public function toArray() {
+    public function toArray()
+    {
         $result = [];
         foreach (static::getInstanceProperties() as $key) {
             $result[$key] = $this->$key;
@@ -53,7 +54,7 @@ class DtoModel implements Arrayable, Jsonable, \JsonSerializable
             $cache = [];
             $reflect = new \ReflectionClass($class);
             foreach ($reflect->getProperties() as $property) {
-                if (!$property->isStatic()){
+                if (!$property->isStatic()) {
                     $cache[] = $property->getName();
                 }
             }

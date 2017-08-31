@@ -20,7 +20,7 @@ class ObjectFieldsTransformer extends BaseTransformer
      * Will output requested fields to result, regardless they described as $hidden or $visible in Eloquent model
      * @param string[] $fields Fields to include in result
      */
-    function __construct(string ...$fields)
+    public function __construct(string ...$fields)
     {
         $this->fields = $fields;
     }
@@ -39,11 +39,12 @@ class ObjectFieldsTransformer extends BaseTransformer
         return $result;
     }
 
-    public function getFieldRecursive($object, $field) {
+    public function getFieldRecursive($object, $field)
+    {
         $fields = explode('.', $field);
         $result = $object;
         foreach ($fields as $field) {
-            if ($result == null){
+            if ($result == null) {
                 break;
             }
             $result = $result->$field;

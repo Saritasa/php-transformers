@@ -14,14 +14,14 @@ class CombineTransformer extends BaseTransformer
      */
     private $transformers;
 
-    function __construct(IDataTransformer ...$transformers)
+    public function __construct(IDataTransformer ...$transformers)
     {
         $this->transformers = $transformers;
     }
 
-    function transform(Arrayable $model)
+    public function transform(Arrayable $model)
     {
-        $model = array_reduce($this->transformers, function($carry, IDataTransformer $transformer) {
+        $model = array_reduce($this->transformers, function ($carry, IDataTransformer $transformer) {
             return collect($transformer->transform($carry));
         }, $model);
         return parent::transform($model);

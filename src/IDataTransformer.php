@@ -6,5 +6,5 @@ use Illuminate\Contracts\Support\Arrayable;
 
 interface IDataTransformer
 {
-    function transform(Arrayable $model);
+    public function transform(Arrayable $model);
 }

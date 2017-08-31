@@ -25,7 +25,7 @@ class LimitFieldsTransformer extends BaseTransformer
      *
      * @param string[] $onlyFields list of fields, to which result must be limited
      */
-    function __construct(string ...$onlyFields)
+    public function __construct(string ...$onlyFields)
     {
         $this->onlyFields = $onlyFields;
     }
