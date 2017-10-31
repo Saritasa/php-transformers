@@ -1,5 +1,11 @@
 # Changes History
 
+1.0.12
+------
+Add NotSupportedException.
+Using in the DtoModel the Saritasa\Transformers\Exceptions\NotSupportedException instead the  
+League\Flysystem\NotSupportedException. 
+
 1.0.11
 ------
 Fix DtoModel different classes fields overlap + DtoModel unit test

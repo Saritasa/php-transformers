@@ -2,7 +2,7 @@
 
 namespace Saritasa\Transformers;
 
-use League\Flysystem\NotSupportedException;
+use Saritasa\Transformers\Exceptions\NotSupportedException;
 use Saritasa\Transformers\Traits\SimpleJsonSerialize;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
