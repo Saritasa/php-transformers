@@ -6,9 +6,9 @@ Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package
 
 1.0.12
 ------
-Add NotSupportedException.
-Using in the DtoModel the Saritasa\Transformers\Exceptions\NotSupportedException instead the
-League\Flysystem\NotSupportedException.
+- Add NotSupportedException.
+- Using in the DtoModel the Saritasa\Transformers\Exceptions\NotSupportedException instead the
+- League\Flysystem\NotSupportedException.
 
 1.0.11
 ------
@@ -16,8 +16,8 @@ Fix DtoModel different classes fields overlap + DtoModel unit test
 
 1.0.10
 ------
-Add ObjectFieldsTransformer
-Fix message display
+- Add ObjectFieldsTransformer
+- Fix message display
 
 1.0.9
 -----
