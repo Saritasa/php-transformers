@@ -13,7 +13,9 @@ Install the ```saritasa/transformers``` package:
 $ composer require saritasa/transformers
 ```
 
-Add the TransformersServiceProvider service provider in ``config/app.php``:
+If you use Laraval 5.4 or less,
+or 5.5 with [package discovery](https://laravel.com/docs/5.5/packages#package-discovery) disabled,
+add the TransformersServiceProvider service provider in ``config/app.php``:
 
 ```php
 'providers' => array(

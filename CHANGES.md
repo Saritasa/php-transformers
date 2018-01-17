@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.12
+------
+Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
+
 1.0.11
 ------
 Fix DtoModel different classes fields overlap + DtoModel unit test
