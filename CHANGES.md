@@ -1,8 +1,14 @@
 # Changes History
 
-1.0.12
+1.0.13
 ------
 Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
+
+1.0.12
+------
+Add NotSupportedException.
+Using in the DtoModel the Saritasa\Transformers\Exceptions\NotSupportedException instead the
+League\Flysystem\NotSupportedException.
 
 1.0.11
 ------
