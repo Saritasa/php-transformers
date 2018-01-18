@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.14
+------
+Do not require minimum-stability of packages
+
 1.0.13
 ------
 Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
