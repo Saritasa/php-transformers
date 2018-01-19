@@ -10,6 +10,8 @@ use Illuminate\Contracts\Support\Arrayable;
 class CombineTransformer extends BaseTransformer
 {
     /**
+     * Transformers to apply sequentially
+     *
      * @var IDataTransformer[]
      */
     private $transformers;
@@ -19,6 +21,12 @@ class CombineTransformer extends BaseTransformer
         $this->transformers = $transformers;
     }
 
+    /**
+     * Transform model into array
+     *
+     * @param Arrayable $model Model to be transformed
+     * @return array
+     */
     public function transform(Arrayable $model)
     {
         $model = array_reduce($this->transformers, function ($carry, IDataTransformer $transformer) {

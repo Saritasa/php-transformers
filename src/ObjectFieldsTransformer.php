@@ -18,6 +18,7 @@ class ObjectFieldsTransformer extends BaseTransformer
 
     /**
      * Will output requested fields to result, regardless they described as $hidden or $visible in Eloquent model
+     *
      * @param string[] $fields Fields to include in result
      */
     public function __construct(string ...$fields)
@@ -25,7 +26,12 @@ class ObjectFieldsTransformer extends BaseTransformer
         $this->fields = $fields;
     }
 
-    /** @inheritdoc */
+    /**
+     * Transform model into array
+     *
+     * @param Arrayable $model Model to be transformed
+     * @return array
+     */
     public function transform(Arrayable $object)
     {
         $result = [];

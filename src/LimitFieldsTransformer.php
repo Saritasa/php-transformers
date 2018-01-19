@@ -30,7 +30,12 @@ class LimitFieldsTransformer extends BaseTransformer
         $this->onlyFields = $onlyFields;
     }
 
-    /** @inheritdoc */
+    /**
+     * Transform model into array
+     *
+     * @param Arrayable $model Model to be transformed
+     * @return array
+     */
     public function transform(Arrayable $model)
     {
         $data = parent::transform($model);

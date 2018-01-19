@@ -19,8 +19,8 @@ class TransformException extends \Exception
      *
      * @param IDataTransformer $transformer Originator of message
      * @param string $message Error message
-     * @param int $code
-     * @param Throwable|null $previous
+     * @param int $code Code to assign to this exception. Most often matches HTTP Error code
+     * @param Throwable|null $previous Previous exception, if any
      */
     public function __construct(IDataTransformer $transformer, $message = "", $code = 0, Throwable $previous = null)
     {
