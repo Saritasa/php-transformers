@@ -1,5 +1,10 @@
 # Changes History
 
+1.0.15
+------
+- DtoModel extends Saritasa\Dto (previously was self-sufficient)
+- NotSupportedException is deprecated. Use Saritasa\NotImplementedException instead
+
 1.0.14
 ------
 Do not require minimum-stability of packages
