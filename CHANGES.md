@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.16
+------
+Require newer version of league/fractal 
+
 1.0.15
 ------
 - DtoModel extends Saritasa\Dto (previously was self-sufficient)
