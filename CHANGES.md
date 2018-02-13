@@ -1,8 +1,12 @@
 # Changes History
 
+1.0.17
+------
+Require saritasa/php-common after extracting base Dto class
+
 1.0.16
 ------
-Require newer version of league/fractal 
+Require newer version of league/fractal
 
 1.0.15
 ------
