@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Saritasa\Transformers\Tests;
 
 use Saritasa\Transformers\LimitFieldsTransformer;
 

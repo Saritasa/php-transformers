@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Saritasa\Transformers\Tests;
 
 class UserDevice extends \Illuminate\Database\Eloquent\Model
 {
