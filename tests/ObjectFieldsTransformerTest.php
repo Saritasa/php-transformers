@@ -18,10 +18,13 @@ class ObjectFieldsTransformerTest extends TestCase
             'device_type' => 'android'
         ]));
 
-        $transformer = new ObjectFieldsTransformer('first_name', 'device.device_type');
+        $user->setRelation('role', null);
+
+        $transformer = new ObjectFieldsTransformer('first_name', 'device.device_type', 'role.name');
         $result = $transformer->transform($user);
-        static::assertEquals(2, count(array_keys($result)));
+        static::assertEquals(3, count(array_keys($result)));
         static::assertEquals('Ivan', $result['first_name']);
         static::assertEquals('android', $result['device.device_type']);
+        static::assertEquals(null, $result['role.name']);
     }
 }
