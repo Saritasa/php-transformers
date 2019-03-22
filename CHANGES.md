@@ -1,5 +1,10 @@
 # Changes History
 
+1.1.0
+------
+- Format passed into array dates in BaseTransformer. Previous version formats only dates in model
+- Resolve issue with `$hidden` and `$visible` arrays of fields in model. Previously only `$hidden` was taken into account
+
 1.0.17
 ------
 Require saritasa/php-common after extracting base Dto class
