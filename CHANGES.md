@@ -1,5 +1,10 @@
 # Changes History
 
+1.2.1
+------
+- Fix ObjectFieldsTransformer on PHP 7.2+
+- Add 7.3, 7.4 environments to test on Travis CI
+
 1.2.0
 ------
 Declare compatibility with Laravel 6

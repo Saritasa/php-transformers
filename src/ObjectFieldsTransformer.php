@@ -3,6 +3,7 @@
 namespace Saritasa\Transformers;
 
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Support\Str;
 
 /**
  * Will output requested fields to result, regardless they described as $hidden or $visible in Eloquent model
@@ -36,7 +37,7 @@ class ObjectFieldsTransformer extends BaseTransformer
     {
         $result = [];
         foreach ($this->fields as $field) {
-            if (str_contains($field, '.')) {
+            if (Str::contains($field, '.')) {
                 $result[$field] = $this->getFieldRecursive($object, $field);
             } else {
                 $result[$field] = $object->$field;

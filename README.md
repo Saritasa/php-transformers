@@ -11,7 +11,7 @@ Custom Data transformers on top of [League/Fractal](https://github.com/thephplea
 See Fractal documentation at http://fractal.thephpleague.com/
 
 
-## Laravel 5.x
+## Laravel 5.x/6.x
 
 Install the ```saritasa/transformers``` package:
 
