@@ -1,8 +1,13 @@
 # Changes History
 
-1.0.18
+1.2.0
 ------
 Declare compatibility with Laravel 6
+
+1.1.0
+------
+- Format passed into array dates in BaseTransformer. Previous version formats only dates in model
+- Resolve issue with `$hidden` and `$visible` arrays of fields in model. Previously only `$hidden` was taken into account
 
 1.0.17
 ------
