@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.18
+------
+Declare compatibility with Laravel 6
+
 1.0.17
 ------
 Require saritasa/php-common after extracting base Dto class
