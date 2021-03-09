@@ -1,6 +1,7 @@
 # Data Transformers
 
-[![Build Status](https://travis-ci.org/Saritasa/php-transformers.svg?branch=master)](https://travis-ci.org/Saritasa/php-transformers)
+[![PHP Unit](https://github.com/Saritasa/php-transformers/workflows/PHP%20Unit/badge.svg)](https://github.com/Saritasa/php-transformers/actions)
+[![PHP CodeSniffer](https://github.com/Saritasa/php-transformers/workflows/PHP%20Codesniffer/badge.svg)](https://github.com/Saritasa/php-transformers/actions)
 [![codecov](https://codecov.io/gh/Saritasa/php-transformers/branch/master/graph/badge.svg)](https://codecov.io/gh/Saritasa/php-transformers)
 [![Release](https://img.shields.io/github/release/saritasa/php-transformers.svg)](https://github.com/Saritasa/php-transformers/releases)
 [![PHPv](https://img.shields.io/packagist/php-v/saritasa/transformers.svg)](http://www.php.net)
