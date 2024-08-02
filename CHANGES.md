@@ -1,5 +1,9 @@
 # Changes History
 
+1.2.2
+------
+- Added support up to Laravel 11
+
 1.2.1
 ------
 - Fix ObjectFieldsTransformer on PHP 7.2+
